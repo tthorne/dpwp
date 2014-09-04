@@ -14,8 +14,12 @@ fruit_cost = raw_input('Enter the cost of the fruit: ')
 many_fruit = raw_input('How many pieces of fruit do you want to buy? ')
 dollar_amount = raw_input('Enter a dollar amount: ')
 
-current = int(dollar_amount)
-cost = int(fruit_cost)
-total_fruit = current - cost
+if int(many_fruit) * int(fruit_cost) < int(dollar_amount):
+    current = int(dollar_amount)
+    cost = int(fruit_cost)
+    purchase = str(fruit)
+    total_fruit = current - cost + ' ' + purchase
+else:
+    total_fruit = 'You do not have enough cash.'
 
-print name + ' went to ' + location + ' riding a ' + color + ' ' + animal + ' to buy some ' + fruit + '. ' + 'The fruit costs' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' so ' + str(total_fruit) + fruit + ' can be purchased.'
+print name + ' went to ' + location + ' riding a ' + color + ' ' + animal + ' to buy some ' + fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + fruit + '. ' + str(total_fruit)
