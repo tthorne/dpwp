@@ -11,6 +11,7 @@ color = raw_input('Enter a color: ')
 animal = raw_input('Enter an animal: ')
 fruit = raw_input('Enter a fruit: ')
 fruit_cost = raw_input('Enter the cost of the fruit: ')
+many_fruit = raw_input('How many pieces of fruit do you want to buy? ')
 dollar_amount = raw_input('Enter a dollar amount: ')
 
 current = int(dollar_amount)
