@@ -28,8 +28,8 @@
       <file leaf-file-name="madlib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lab 1 Madlib/madlib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51369864" vertical-offset="0" max-vertical-offset="584">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.1758794" vertical-offset="0" max-vertical-offset="597">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -300,8 +300,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Lab 1 Madlib/madlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51369864" vertical-offset="0" max-vertical-offset="584">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.1758794" vertical-offset="0" max-vertical-offset="597">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>

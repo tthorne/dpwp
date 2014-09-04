@@ -6,7 +6,6 @@ Date: Thursday, September 4, 2014
 '''
 
 name = raw_input('Enter a name: ')
-location = raw_input('Enter a location: ')
 color = raw_input('Enter a color: ')
 animal = raw_input('Enter an animal: ')
 fruit = raw_input('Enter a fruit: ')
@@ -18,8 +17,9 @@ if int(many_fruit) * int(fruit_cost) < int(dollar_amount):
     current = int(dollar_amount)
     cost = int(fruit_cost)
     purchase = str(fruit)
-    total_fruit = current - cost + ' ' + purchase
+    fruit_total = current - cost
+    total_fruit = name + ' can purchase ' + fruit_total
 else:
-    total_fruit = 'You do not have enough cash.'
+    total_fruit = 'But without enough cash they'
 
-print name + ' went to ' + location + ' riding a ' + color + ' ' + animal + ' to buy some ' + fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + fruit + '. ' + str(total_fruit)
+print name + ' went to the store riding a ' + color + ' ' + animal + ' to buy some ' + fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + fruit + '. ' + str(total_fruit)
