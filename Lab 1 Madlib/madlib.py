@@ -3,6 +3,7 @@ Student Name: Tara Thorne
 Student Number: #0003809521
 Assignment: Lab 1 Madlib
 Date: Thursday, September 4, 2014
+GitHub URL: https://github.com/tthorne/dpwp/tree/master/Lab%201%20Madlib
 '''
 
 # While Loop
