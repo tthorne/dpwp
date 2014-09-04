@@ -35,7 +35,7 @@ if money(int(many_fruit),int(fruit_cost)) < int(dollar_amount): # Mathematical
 else:
     total_fruit = str(name) + ' does not have enough cash to purchase ' + str(list_fruit)
 
-    # Condition Statement
+# Condition Statement
 if money(int(many_fruit),int(fruit_cost)) > int(dollar_amount): # Mathematical
     current = int(dollar_amount)
     cost = int(fruit_cost)
@@ -45,4 +45,8 @@ if money(int(many_fruit),int(fruit_cost)) > int(dollar_amount): # Mathematical
     cash = str(name) + ' needs $' + str(cash_needed) + ' more to purchase ' + str(list_fruit) + '.'
 else: cash = ' Continue to check out.'
 
-print name + ' went to the store riding a ' + color + ' ' + animal + ' to buy some ' + list_fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + ' ' + list_fruit + '. ' + str(total_fruit) + '. ' + str(cash)
+# While Loop
+i = 0
+while i<10:
+    print name + ' went to the store riding a ' + color + ' ' + animal + ' to buy some ' + list_fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + ' ' + list_fruit + '. ' + str(total_fruit) + '. ' + str(cash)
+    i = i+1
