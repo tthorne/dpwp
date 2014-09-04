@@ -7,7 +7,7 @@ Date: Thursday, September 4, 2014
 
 # While Loop
 i = 0
-while i<1:
+while i<11:
 
     # The Variables
     name = raw_input('Enter a name: ')
