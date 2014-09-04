@@ -8,6 +8,7 @@ Date: Thursday, September 4, 2014
 # While Loop
 i = 0
 while i<10:
+    
     # The Variables
     name = raw_input('Enter a name: ')
     color = raw_input('Enter a color: ')
