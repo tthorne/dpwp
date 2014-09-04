@@ -20,15 +20,29 @@ fruit_name = {1:'Apples',2:'Bananas',3:'Cherries',4:'Grapes',5:'Oranges'}
 fruit_type = int(fruit)
 list_fruit = fruit_name[fruit_type]
 
+#Function
+def money(many_fruit,fruit_cost):
+    total = many_fruit * fruit_cost
+    return total
 
 # Condition Statement
-if int(many_fruit) * int(fruit_cost) < int(dollar_amount): # Mathematical
+if money(int(many_fruit),int(fruit_cost)) < int(dollar_amount): # Mathematical
     current = int(dollar_amount)
     cost = int(fruit_cost)
     purchase = str(fruit)
     fruit_total = current - cost # Mathematical
-    total_fruit = str(name) + ' can purchase ' + str(fruit_total) + ' ' + str(list_fruit) + "."
+    total_fruit = str(name) + ' can purchase ' + str(fruit_total) + ' ' + str(list_fruit)
 else:
     total_fruit = str(name) + ' does not have enough cash to purchase ' + str(list_fruit)
 
-print name + ' went to the store riding a ' + color + ' ' + animal + ' to buy some ' + list_fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + ' ' + list_fruit + '. ' + str(total_fruit)
+    # Condition Statement
+if money(int(many_fruit),int(fruit_cost)) > int(dollar_amount): # Mathematical
+    current = int(dollar_amount)
+    cost = int(fruit_cost)
+    how_many = int(many_fruit)
+    purchase = str(fruit)
+    cash_needed = cost * how_many - cost # Mathematical
+    cash = str(name) + ' needs $' + str(cash_needed) + ' more to purchase ' + str(list_fruit) + '.'
+else: cash = ' Continue to check out.'
+
+print name + ' went to the store riding a ' + color + ' ' + animal + ' to buy some ' + list_fruit + '. ' + 'The fruit costs $' + fruit_cost + ' and ' + name + ' brought $' + dollar_amount + ' and wants to buy ' + many_fruit + ' ' + list_fruit + '. ' + str(total_fruit) + '. ' + str(cash)
