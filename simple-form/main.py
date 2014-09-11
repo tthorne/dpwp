@@ -19,6 +19,15 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
         background: #132042;
         font-family: 'Poiret One', cursive;
         background-image: url('coloredhorse.png');
+        margin: 0px;
+    }
+
+    .bar {
+        position: fixed;
+        background: #000000;
+        height: 50px;
+        width: 100%;
+        margin-top: -50px;
     }
 
     .wrap {
@@ -41,8 +50,6 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
         color: #BFD6F8;
         margin-top: 0px;
         margin-bottom: 0px;
-        text-shadow: 1px 1px 1px #132042;
-        border-bottom: 1px solid #6D759C;
     }
 
     .form {
@@ -69,7 +76,8 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     </style>
     </head>
     <body>
-    <div class="wrap"><h1>Register Horse</h1>'''
+    <div class="bar"><h1>Register Horse</h1></div>
+    <div class="wrap">'''
 
         page_body = '''<form method="GET">
             <div class="group"><label><strong>Name:</strong><label> <input type="text" name="name" class="form" /></div>
