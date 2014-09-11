@@ -9,7 +9,7 @@ import webapp2 # use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): #Declaring a class
     def get(self): # function that starts everything. Catalyst
-        page_head = '''<!DOCTYPE HTML>
+        head = '''<!DOCTYPE HTML>
 <html>
     <head>
     <title>Simple Form</title>
@@ -51,6 +51,10 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     .group {
         margin-bottom: 15px;
         vertical-align: middle;
+    }
+
+    b, strong {
+        font-weight: bolder;
     }
 
     h1 {
@@ -103,7 +107,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     <div class="bar"><div class="barwrap"><h1>Register Horse</h1></div></div>
     <div class="wrap">'''
 
-        page_body = '''<form method="GET">
+        body = '''<form method="GET">
             <div class="group"><label><strong>Name:</strong><label> <input type="text" name="name" class="form" /></div>
             <div class="group"><label><strong>Breed:</strong></label> <input type="text" name="breed" class="form" /></div>
             <div class="group"><label><strong>Year Of Birth:</strong></label> <input type="text" name="yob" class="form" /></div>
@@ -114,9 +118,12 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
             <option value="Mare">Mare</option>
             <option value="Stallion">Stallion</option>
             </select></div>
+            <div class="group">
+            <label>Do you own this horse? </label>
+            <input type="checkbox" name="own" value="Yes">Yes <input type="checkbox" name="own" value="No">No</div>
             <div class="group"><input type="submit" value="Submit" class="button" /></div>'''
 
-        page_close = '''
+        close = '''
         </form>
         </div>
     </body>
@@ -125,9 +132,11 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
             #stores info we got from the form
             name = self.request.GET['name']
             breed = self.request.GET['breed']
+            yob = self.request.GET['yob']
             gender = self.request.GET['gender']
-            self.response.write(page_head + '<strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + ' <br /><strong>Gender:</strong> ' + gender + "</br>" + page_body + page_close)
-        else: self.response.write(page_head + page_body + page_close) #print
+            own = self.request.GET['own']
+            self.response.write(head + '<div class=""><strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + '<strong>Year Of Birth</strong> ' + yob +  '<br /><strong>Gender:</strong> ' + gender + '</br>' + '<strong>Do you own this horse?</strong> ' + own + '</div>' + body + close)
+        else: self.response.write(head + body + close) #print
 
 # DO NOT TOUCH!!
 app = webapp2.WSGIApplication([
