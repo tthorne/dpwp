@@ -9,7 +9,7 @@ import webapp2 # use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): #Declaring a class
     def get(self): # function that starts everything. Catalyst
-        head = '''<!DOCTYPE HTML>
+        head = '''Includes the style sheet for the layout '''''''<!DOCTYPE HTML>
 <html>
     <head>
     <title>Simple Form</title>
@@ -115,7 +115,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     <body>
     <div class="bar"><div class="barwrap"><h1>Register Horse</h1></div></div>
     <div class="wrap">'''
-
+        '''Contains the form asking the user to input the name, breed, year of birth, gender, and if own the horse.'''
         body = '''<form method="GET">
             <div class="group"><label><strong>Name:</strong><label> <input type="text" name="name" class="form" /></div>
             <div class="group"><label><strong>Breed:</strong></label> <input type="text" name="breed" class="form" /></div>
@@ -144,8 +144,8 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
             yob = self.request.GET['yob']
             gender = self.request.GET['gender']
             own = self.request.GET['own']
-            self.response.write(head + '<div class="response"><strong>Your input follows as the following</strong>:<br /><strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + '<br /><strong>Year Of Birth:</strong> ' + yob +  '<br /><strong>Gender:</strong> ' + gender + '</br>' + '<strong>Do you own this horse?</strong> ' + own + '</div>' + body + close)
-        else: self.response.write(head + body + close) #print
+            self.response.write(head + '<div class="response"><strong>Your input follows as the following</strong>:<br /><strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + '<br /><strong>Year Of Birth:</strong> ' + yob +  '<br /><strong>Gender:</strong> ' + gender + '</br>' + '<strong>Do you own this horse?</strong> ' + own + '</div>' + body + close) # If the user has input the proper information this is what is displayed. If shows the input results along with the form
+        else: self.response.write(head + body + close) # If the user hasn't input any information then they see the form.
 
 # DO NOT TOUCH!!
 app = webapp2.WSGIApplication([
