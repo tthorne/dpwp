@@ -18,7 +18,9 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     body {
         background: #132042;
         font-family: 'Poiret One', cursive;
-        background-image: url('coloredhorse.png');
+        background: url('coloredhorse.png');
+        background-repeat: no-repeat;
+        background-position: left;
         margin: 0px;
     }
 
@@ -28,6 +30,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
         height: 60px;
         width: 100%;
         margin-top: -100px;
+        border-bottom: 1px solid #7BF6FE;
     }
 
     .barwrap {
