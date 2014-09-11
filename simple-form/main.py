@@ -16,11 +16,11 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     <link href='http://fonts.googleapis.com/css?family=Pacifico|Poiret+One' rel='stylesheet' type='text/css'>
     <style>
     body {
-        background: #132042;
         font-family: 'Poiret One', cursive;
-        background: url('coloredhorse.png');
-        background-repeat: no-repeat;
-        background-position: left;
+        background: url('coloredhorse.png'), url('coloredhorse2.png');
+        background-repeat: no-repeat, no-repeat;
+        background-size: 25%, 25%;
+        background-position: bottom left, bottom right;
         margin: 0px;
     }
 

@@ -13,6 +13,10 @@ handlers:
   static_files: coloredhorse.png
   upload: coloredhorse\.png
 
+- url: /coloredhorse2\.png
+  static_files: coloredhorse2.png
+  upload: coloredhorse2\.png
+
 - url: .*
   script: main.app
 
