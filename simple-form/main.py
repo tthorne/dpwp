@@ -119,7 +119,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
             <option value="Stallion">Stallion</option>
             </select></div>
             <div class="group">
-            <label>Do you own this horse? </label>
+            <label><strong>Do you own this horse?</strong></label>
             <input type="checkbox" name="own" value="Yes">Yes <input type="checkbox" name="own" value="No">No</div>
             <div class="group"><input type="submit" value="Submit" class="button" /></div>'''
 
