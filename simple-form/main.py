@@ -25,14 +25,19 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     .bar {
         position: fixed;
         background: #000000;
-        height: 50px;
+        height: 60px;
         width: 100%;
-        margin-top: -50px;
+        margin-top: -100px;
+    }
+
+    .barwrap {
+        width: 60%;
+        margin: 0px auto;
     }
 
     .wrap {
         width: 60%;
-        margin: 50px auto;
+        margin: 100px auto;
         border: 4px solid #132042;
         padding: 20px;
         background: #ffffff;
@@ -76,7 +81,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     </style>
     </head>
     <body>
-    <div class="bar"><h1>Register Horse</h1></div>
+    <div class="bar"><div class="barwrap"><h1>Register Horse</h1></div></div>
     <div class="wrap">'''
 
         page_body = '''<form method="GET">
