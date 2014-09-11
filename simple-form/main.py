@@ -57,7 +57,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
         border: 1px solid #6D759C;
         padding: 20px;
         width: 50%;
-        margin: 0px auto;
+        margin: 20px auto;
         background-color: #BFD6F8;
         border-radius: 20px;
     }
@@ -144,7 +144,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
             yob = self.request.GET['yob']
             gender = self.request.GET['gender']
             own = self.request.GET['own']
-            self.response.write(head + '<div class="response"><p>Your input follows as the following:</p><strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + '<br /><strong>Year Of Birth</strong> ' + yob +  '<br /><strong>Gender:</strong> ' + gender + '</br>' + '<strong>Do you own this horse?</strong> ' + own + '</div>' + body + close)
+            self.response.write(head + '<div class="response"><strong>Your input follows as the following</strong>:<br /><strong>Name:</strong> ' + name + ' <br /><strong>Breed:</strong> ' + breed + '<br /><strong>Year Of Birth:</strong> ' + yob +  '<br /><strong>Gender:</strong> ' + gender + '</br>' + '<strong>Do you own this horse?</strong> ' + own + '</div>' + body + close)
         else: self.response.write(head + body + close) #print
 
 # DO NOT TOUCH!!
