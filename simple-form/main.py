@@ -9,7 +9,8 @@ import webapp2 # use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): #Declaring a class
     def get(self): # function that starts everything. Catalyst
-        head = '''Includes the style sheet for the layout '''''''<!DOCTYPE HTML>
+        '''Includes the style sheet for the layout '''
+        head = '''<!DOCTYPE HTML>
 <html>
     <head>
     <title>Simple Form</title>
