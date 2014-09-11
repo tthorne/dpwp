@@ -18,6 +18,7 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
     body {
         background: #132042;
         font-family: 'Poiret One', cursive;
+        background-image: url('coloredhorse.png');
     }
 
     .wrap {
@@ -85,7 +86,6 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
 
         page_close = '''
         </form>
-        <img src="images/coloredhorse.png">
         </div>
     </body>
 </html>'''
