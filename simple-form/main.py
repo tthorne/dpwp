@@ -81,6 +81,22 @@ class MainHandler(webapp2.RequestHandler): #Declaring a class
         box-shadow: inset 0 1px 1px rgba(191,214,248,.75), 0 0 8px rgba(191,214,248, .75);
     }
 
+    .button {
+        color: #BFD6F8;
+        background-color: #484EBC;
+        border: 1px solid #132042;
+        border-radius: 10px;
+        height: 30px;
+        width: 60px
+    }
+
+    .button:hover,
+    .button:focus,
+    .button:active {
+        color: #BFD6F8;
+        background-color: #132042;
+    }
+
     </style>
     </head>
     <body>
