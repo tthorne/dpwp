@@ -1,13 +1,13 @@
 body {
         font-family: 'Poiret One', cursive;
-        background: url('coloredhorse.png'), url('coloredhorse2.png');
+        background: url('../coloredhorse.png'), url('../coloredhorse2.png');
         background-repeat: no-repeat, no-repeat;
         background-size: 25%, 25%;
         background-position: bottom left, bottom right;
         margin: 0px;
     }
 
-    .bar {
+.bar {
         position: fixed;
         background: #000000;
         height: 60px;
@@ -16,12 +16,12 @@ body {
         border-bottom: 1px solid #7BF6FE;
     }
 
-    .barwrap {
+.barwrap {
         width: 60%;
         margin: 0px auto;
-    }
+}
 
-    .wrap {
+.wrap {
         width: 60%;
         margin: 100px auto;
         border: 4px solid #132042;
@@ -29,7 +29,7 @@ body {
         background: #ffffff;
         border-radius: 40px;
         box-shadow: 1px 1px 10px #BFD6F8;
-    }
+}
 
     .group {
         margin-bottom: 15px;

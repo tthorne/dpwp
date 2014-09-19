@@ -8,6 +8,10 @@ handlers:
 - url: /css
   static_dir: css
 
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
 - url: /coloredhorse\.png
   static_files: coloredhorse.png
   upload: coloredhorse\.png
@@ -15,10 +19,6 @@ handlers:
 - url: /coloredhorse2\.png
   static_files: coloredhorse2.png
   upload: coloredhorse2\.png
-
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
 
 - url: .*
   script: main.app
