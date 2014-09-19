@@ -1,6 +1,6 @@
 body {
         font-family: 'Poiret One', cursive;
-        background-color: url('images/coloredhorse.png'), url('images/coloredhorse2.png');
+        background: url('coloredhorse.png'), url('coloredhorse2.png');
         background-repeat: no-repeat, no-repeat;
         background-size: 25%, 25%;
         background-position: bottom left, bottom right;
