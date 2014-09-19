@@ -14,12 +14,13 @@ class Page(object):
     <div class="wrap">
         """
         self.body = ""
+        self.view = ""
         self.close = """
     </div>
     </body>
 </html>
         """
     def print_out(self):
-        all = self.head + self.body + self.close
+        all = self.head + self.body + self.view + self.close
         all = all.format(**locals())
         return all

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8066b460-d10c-4d55-b9a3-51e195ed9f98" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/encapsulated/main.py" afterPath="$PROJECT_DIR$/encapsulated/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/encapsulated/pages.py" afterPath="$PROJECT_DIR$/encapsulated/pages.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/encapsulated/css/style.css" afterPath="$PROJECT_DIR$/encapsulated/css/style.css" />
     </list>
     <ignored path="dpwp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encapsulated/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6490148" vertical-offset="718" max-vertical-offset="1530">
-              <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1530">
+              <caret line="68" column="144" selection-start-line="68" selection-start-column="144" selection-end-line="68" selection-end-column="144" />
               <folding>
                 <element signature="e#206#220#0" expanded="true" />
               </folding>
@@ -50,18 +52,18 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encapsulated/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="1500">
-              <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+            <state vertical-scroll-proportion="-27.8" vertical-offset="760" max-vertical-offset="1560">
+              <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pages.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encapsulated/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.4181818" vertical-offset="0" max-vertical-offset="825">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -70,8 +72,8 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simple-form/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="2400">
-              <caret line="139" column="7" selection-start-line="137" selection-start-column="8" selection-end-line="139" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1588" max-vertical-offset="2400">
+              <caret line="133" column="90" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -137,8 +139,8 @@
         <option value="$PROJECT_DIR$/Lab 1 Madlib/madlib.py" />
         <option value="$PROJECT_DIR$/encapsulated/app.yaml" />
         <option value="$PROJECT_DIR$/encapsulated/css/style.css" />
-        <option value="$PROJECT_DIR$/encapsulated/pages.py" />
         <option value="$PROJECT_DIR$/encapsulated/main.py" />
+        <option value="$PROJECT_DIR$/encapsulated/pages.py" />
       </list>
     </option>
   </component>
@@ -534,6 +536,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/encapsulated/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.8" vertical-offset="760" max-vertical-offset="1560">
+          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-form/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1588" max-vertical-offset="2400">
+          <caret line="133" column="90" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encapsulated/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1530">
+          <caret line="68" column="144" selection-start-line="68" selection-start-column="144" selection-end-line="68" selection-end-column="144" />
+          <folding>
+            <element signature="e#206#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/encapsulated/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="435">
@@ -542,37 +570,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/encapsulated/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-form/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="2400">
-          <caret line="139" column="7" selection-start-line="137" selection-start-column="8" selection-end-line="139" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/encapsulated/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.4181818" vertical-offset="0" max-vertical-offset="825">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encapsulated/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6490148" vertical-offset="718" max-vertical-offset="1530">
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-          <folding>
-            <element signature="e#206#220#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -92,4 +92,8 @@ body {
         color: #BFD6F8;
         background-color: #132042;
     }
-}
+
+    th {
+        text-align: left;
+        background-color: #7BF6FE;
+    }
