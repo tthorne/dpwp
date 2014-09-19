@@ -67,17 +67,6 @@ class MainHandler(webapp2.RequestHandler):
 
         p = Page()
         p.body = "<table width='100%'><tr><th><strong>Name</strong></th><th><strong>Option</strong></th></tr><tr><td>" + c.name + "<td><a href="">View</a></td></tr><tr><td>" + m.name + "<td>View</td><tr><td>" + d.name + "<td>View</td><tr><td>" + j.name + "<td>View</td><tr><td>" + t.name + "<td>View</td></tr></tr></tr></tr></table>"
-
-        if self.request.GET:
-            #stores info we got from the form
-            self.name = self.request.GET['name']
-            self.address = self.request.GET['address']
-            self.phone = self.request.GET['phone']
-            self.level = self.request.GET['level']
-            self.response.write(head + '<div class="response"><strong>Your input follows as the following</strong>:<br /><strong>Name:</strong> ' + name + ' <br />' + body + close) # If the user has input the proper information this is what is displayed. If shows the input results along with the form
-        else: self.response.write(head + body + close) # If the user hasn't input any information then they see the form.
-
-        p.view = "<h2>Member Information</h2><strong>Name</strong>" + c.name
         self.response.write(p.print_out())
 
 class Registration(object):
