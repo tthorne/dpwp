@@ -66,8 +66,10 @@ class MainHandler(webapp2.RequestHandler):
         #self.response.write ("<br><br><strong>Name:</strong> " + t.name + "<br /><strong>Address:</strong> " + t.address + "<br /><strong>Phone:</strong> " + t.phone + "<br /><strong>Membership Level:</strong> " + t.level + "<br /><strong>Number of Horses Registered:</strong> " + str(t.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(t.final_price))
 
         p = Page()
-        p.body = "<table width='100%'><tr><th><strong>Name</strong></th><th><strong>Option</strong></th></tr><tr><td>" + c.name + "<td><a href="">View</a></td></tr><tr><td>" + m.name + "<td>View</td><tr><td>" + d.name + "<td>View</td><tr><td>" + j.name + "<td>View</td><tr><td>" + t.name + "<td>View</td></tr></tr></tr></tr></table>"
+        member = [c,m,d,j,t]
+        p.body = "<strong>Name:</strong." + member[1].name
         self.response.write(p.print_out())
+
 
 class Registration(object):
     def __init__(self):
