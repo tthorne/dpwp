@@ -71,7 +71,7 @@ class MainHandler(webapp2.RequestHandler):
         #return results
 
         p = Page()
-        p.body = "<h1>Registered Members</h1> <div class='row'>" + c.name
+        p.body = "<table width='100%'><tr><th><strong>Name</strong></th><th><strong>Option</strong></th></tr><tr><td>" + c.name + "<td>View</td></tr><tr><td>" + m.name + "<td>View</td><tr><td>" + d.name + "<td>View</td><tr><td>" + j.name + "<td>View</td><tr><td>" + t.name + "<td>View</td></tr></tr></tr></tr></table>"
         self.response.write(p.print_out())
 
 class Registration(object):
