@@ -10,9 +10,6 @@ from pages import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page()
-        self.response.write(p.print_out())
-
         #Charles Registration
         c = Registration()
         c.name = "Charles"
@@ -22,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
         c.horses = 5
         c.fee = 125.95
         c.calc_price()
-        self.response.write ("<strong>Name:</strong> " + c.name + "<br /><strong>Address:</strong> " + c.address + "<br /><strong>Phone:</strong> " + c.phone + "<br /><strong>Membership Level:</strong> " + c.level + "<br /><strong>Number of Horses Registered:</strong> " + str(c.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(c.final_price))
+        #self.response.write ("<strong>Name:</strong> " + c.name + "<br /><strong>Address:</strong> " + c.address + "<br /><strong>Phone:</strong> " + c.phone + "<br /><strong>Membership Level:</strong> " + c.level + "<br /><strong>Number of Horses Registered:</strong> " + str(c.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(c.final_price))
 
         #Megan Registration
         m = Registration()
@@ -33,7 +30,7 @@ class MainHandler(webapp2.RequestHandler):
         m.horses = 15
         m.fee = 25.95
         m.calc_price()
-        self.response.write ("<br><br><strong>Name:</strong> " + m.name + "<br /><strong>Address:</strong> " + m.address + "<br /><strong>Phone:</strong> " + m.phone + "<br /><strong>Membership Level:</strong> " + m.level + "<br /><strong>Number of Horses Registered:</strong> " + str(m.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(m.final_price))
+        #self.response.write ("<br><br><strong>Name:</strong> " + m.name + "<br /><strong>Address:</strong> " + m.address + "<br /><strong>Phone:</strong> " + m.phone + "<br /><strong>Membership Level:</strong> " + m.level + "<br /><strong>Number of Horses Registered:</strong> " + str(m.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(m.final_price))
 
         #Duke Registration
         d = Registration()
@@ -44,7 +41,7 @@ class MainHandler(webapp2.RequestHandler):
         d.horses = 1
         d.fee = 75.95
         d.calc_price()
-        self.response.write ("<br><br><strong>Name:</strong> " + d.name + "<br /><strong>Address:</strong> " + d.address + "<br /><strong>Phone:</strong> " + d.phone + "<br /><strong>Membership Level:</strong> " + d.level + "<br /><strong>Number of Horses Registered:</strong> " + str(d.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(d.final_price))
+        #self.response.write ("<br><br><strong>Name:</strong> " + d.name + "<br /><strong>Address:</strong> " + d.address + "<br /><strong>Phone:</strong> " + d.phone + "<br /><strong>Membership Level:</strong> " + d.level + "<br /><strong>Number of Horses Registered:</strong> " + str(d.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(d.final_price))
 
         #Jenn Registration
         j = Registration()
@@ -55,7 +52,7 @@ class MainHandler(webapp2.RequestHandler):
         j.horses = 5
         j.fee = 25.95
         j.calc_price()
-        self.response.write ("<br><br><strong>Name:</strong> " + j.name + "<br /><strong>Address:</strong> " + j.address + "<br /><strong>Phone:</strong> " + j.phone + "<br /><strong>Membership Level:</strong> " + j.level + "<br /><strong>Number of Horses Registered:</strong> " + str(j.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(j.final_price))
+        #self.response.write ("<br><br><strong>Name:</strong> " + j.name + "<br /><strong>Address:</strong> " + j.address + "<br /><strong>Phone:</strong> " + j.phone + "<br /><strong>Membership Level:</strong> " + j.level + "<br /><strong>Number of Horses Registered:</strong> " + str(j.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(j.final_price))
 
         #Tara's Registration
         t = Registration()
@@ -66,7 +63,16 @@ class MainHandler(webapp2.RequestHandler):
         t.horses = 15
         t.fee = 125.95
         t.calc_price()
-        self.response.write ("<br><br><strong>Name:</strong> " + t.name + "<br /><strong>Address:</strong> " + t.address + "<br /><strong>Phone:</strong> " + t.phone + "<br /><strong>Membership Level:</strong> " + t.level + "<br /><strong>Number of Horses Registered:</strong> " + str(t.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(t.final_price))
+        #self.response.write ("<br><br><strong>Name:</strong> " + t.name + "<br /><strong>Address:</strong> " + t.address + "<br /><strong>Phone:</strong> " + t.phone + "<br /><strong>Membership Level:</strong> " + t.level + "<br /><strong>Number of Horses Registered:</strong> " + str(t.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(t.final_price))
+
+
+        #people = [c,m,d,j,t]
+        #results = "Name: " + members[0].name
+        #return results
+
+        p = Page()
+        p.body = "<h1>Registered Members</h1> <div class='row'>" + c.name
+        self.response.write(p.print_out())
 
 class Registration(object):
     def __init__(self):
@@ -81,6 +87,10 @@ class Registration(object):
     @property
     def final_price(self):
         return self._final_price
+
+    def members(self):
+        self.name = member_name
+        return self.name
 
     @final_price.setter
     def final_price(self,new_final_price):

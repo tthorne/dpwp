@@ -11,8 +11,7 @@ class Page(object):
     </head>
     <body>
         """
-
-        self.body = "Welcome to my OOP Python page!"
+        self.body = ""
         self.close = """
     </body>
 </html>
