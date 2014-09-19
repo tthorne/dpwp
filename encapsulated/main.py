@@ -65,11 +65,6 @@ class MainHandler(webapp2.RequestHandler):
         t.calc_price()
         #self.response.write ("<br><br><strong>Name:</strong> " + t.name + "<br /><strong>Address:</strong> " + t.address + "<br /><strong>Phone:</strong> " + t.phone + "<br /><strong>Membership Level:</strong> " + t.level + "<br /><strong>Number of Horses Registered:</strong> " + str(t.horses) + "<br /><strong>Total Registration Fee:</strong> $" + str(t.final_price))
 
-
-        #people = [c,m,d,j,t]
-        #results = "Name: " + members[0].name
-        #return results
-
         p = Page()
         p.body = "<table width='100%'><tr><th><strong>Name</strong></th><th><strong>Option</strong></th></tr><tr><td>" + c.name + "<td>View</td></tr><tr><td>" + m.name + "<td>View</td><tr><td>" + d.name + "<td>View</td><tr><td>" + j.name + "<td>View</td><tr><td>" + t.name + "<td>View</td></tr></tr></tr></tr></table>"
         self.response.write(p.print_out())
@@ -87,10 +82,6 @@ class Registration(object):
     @property
     def final_price(self):
         return self._final_price
-
-    def members(self):
-        self.name = member_name
-        return self.name
 
     @final_price.setter
     def final_price(self,new_final_price):
