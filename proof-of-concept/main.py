@@ -5,7 +5,7 @@ import json
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = FormPage()
-        p.inputs = [['item_id', 'text', 'Item Id ex.2060'],['Submit', 'submit']]
+        p.inputs = [['item_id', 'text', 'Item Id ex.9579'],['Submit', 'submit']]
         self.response.write(p.print_out())
 
         if self.request.GET: #only if there is a zip variable in the url
@@ -28,7 +28,8 @@ class MainHandler(webapp2.RequestHandler):
             level = jsondoc['level']
             rarity = jsondoc['rarity']
             vendor_value = jsondoc['vendor_value']
-            p.results = ("<br/><strong>Item Name:</strong> " + name + "<br/><strong>Description:</strong>" + description + "<br/><strong>Type:</strong>" + type + "<br/><strong>Level:</strong>" + level + "<br/><strong>Rarity:</strong>" + rarity + "<br/><strong>Rarity:</strong>" + vendor_value)
+            self.response.write("<br/><strong>Item Name:</strong> " + name + "<br/><strong>Description:</strong> " + description + "<br/><strong>Type:</strong> " + type + "<br/><strong>Level:</strong> " + level + "<br/><strong>Rarity:</strong> " + rarity + "<br/><strong>Rarity:</strong> " + vendor_value)
+
 
 class Page(object): #borrowing stuff from the object class
     def __init__(self): #constructor
@@ -58,7 +59,6 @@ class FormPage(Page):
         self._form_close = '</form>'
         self.__inputs = []
         self._form_inputs = ''
-        self._results = ''
 
     @property
     def inputs(self):
@@ -81,7 +81,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + str(self._results) + self._close
+        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
