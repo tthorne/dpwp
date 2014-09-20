@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8066b460-d10c-4d55-b9a3-51e195ed9f98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proof-of-concept/main.py" afterPath="$PROJECT_DIR$/proof-of-concept/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proof-of-concept/bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proof-of-concept/images/GW2_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proof-of-concept/images/bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proof-of-concept/images/bg2.png" afterPath="" />
     </list>
     <ignored path="dpwp.iws" />
     <ignored path=".idea/workspace.xml" />
