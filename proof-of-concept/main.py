@@ -9,7 +9,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(p.print_out())
 
         if self.request.GET: #only if there is a zip variable in the url
-            #get inro from api
+            #get info from api
             item_id = self.request.GET['item_id']
             url= "https://api.guildwars2.com/v1/item_details.json?item_id=" + item_id
             #assemble the request
