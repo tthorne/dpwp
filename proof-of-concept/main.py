@@ -28,8 +28,7 @@ class MainHandler(webapp2.RequestHandler):
             level = jsondoc['level']
             rarity = jsondoc['rarity']
             vendor_value = jsondoc['vendor_value']
-            self.response.write("<br/><strong>Item Name:</strong> " + name + "<br/><strong>Description:</strong>" + description + "<br/><strong>Type:</strong>" + type + "<br/><strong>Level:</strong>" + level + "<br/><strong>Rarity:</strong>" + rarity + "<br/><strong>Rarity:</strong>" + vendor_value)
-
+            p.results = ("<br/><strong>Item Name:</strong> " + name + "<br/><strong>Description:</strong>" + description + "<br/><strong>Type:</strong>" + type + "<br/><strong>Level:</strong>" + level + "<br/><strong>Rarity:</strong>" + rarity + "<br/><strong>Rarity:</strong>" + vendor_value)
 
 class Page(object): #borrowing stuff from the object class
     def __init__(self): #constructor
@@ -43,7 +42,7 @@ class Page(object): #borrowing stuff from the object class
     </head>
     <body>'''
 
-        self._body = '<img src="images/GW2_Logo.png" width="300px" /><h1>Guild Wars 2 Items</h1>'
+        self._body = '<img src="images/GW2_Logo.png" width="300px" /><h1>Guild Wars 2 Items Database Search</h1>'
         self._close = '''
     </body>
 </html>'''
@@ -59,6 +58,7 @@ class FormPage(Page):
         self._form_close = '</form>'
         self.__inputs = []
         self._form_inputs = ''
+        self._results = ''
 
     @property
     def inputs(self):
@@ -81,7 +81,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + str(self._results) + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
