@@ -28,7 +28,7 @@ class ItemView(object):
 
     def update(self):
         for do in self.__idos:
-            self.__content += '<h2 class="subhead">Search Results</h2><strong>Name:</strong> ' + do.name + '<br/><strong>Description:</strong> <br/>' + do.description + '<br/><strong>Type:</strong> ' + do.type + '<br/><strong>Level:</strong> ' + do.level + '<br/><strong>Rarity:</strong> ' + do.rarity + '<br/><strong>Vendor Value:</strong> ' + do.vendor_value
+            self.__content += '<h2 class="subhead">Search Results</h2><strong>Name:</strong> ' + do.name + '<br/><strong>Description:</strong> <br/>' + do.description + '<br/><strong>Type:</strong> ' + do.type + '<br/><strong>Level:</strong> ' + do.level + '<br/><strong>Rarity:</strong> ' + do.rarity + '<br/><strong>Vendor Value:</strong> $' + do.vendor_value
 
     @property
     def content(self):

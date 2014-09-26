@@ -57,3 +57,13 @@ strong, b {
   border-radius: 5px;
   margin: 4px;
 }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(51,64,54,0), rgba(51,64,54,0.85), rgba(51,64,54,0));
+    background-image:    -moz-linear-gradient(left, rgba(51,64,54,0), rgba(51,64,54,0.85), rgba(51,64,54,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(51,64,54,0), rgba(51,64,54,0.85), rgba(51,64,54,0));
+    background-image:      -o-linear-gradient(left, rgba(51,64,54,0), rgba(51,64,54,0.85), rgba(51,64,54,0));
+	background-image:      linear-gradient(left, rgba(51,64,54,0), rgba(51,64,54,0.85), rgba(51,64,54,0)); 
+}
