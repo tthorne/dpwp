@@ -53,7 +53,7 @@ class ItemModel(object):
     ''' This model handles fetching, parsing and sorting data from Yahoo's weather api '''
     def __init__(self):
         self.__url = "https://api.guildwars2.com/v1/item_details.json?item_id="
-        self.__zip = ''
+        self.__item_id = ''
         self.__jsondoc = ''
 
         #parse
