@@ -149,7 +149,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Items Database Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
+        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Items Database Search</h1><div class="search">' + self._form_open + self._form_inputs + self._form_close + '</div>' + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
