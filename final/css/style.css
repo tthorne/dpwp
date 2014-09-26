@@ -1,12 +1,19 @@
 body {
     font-family: 'Open Sans', sans-serif;
-	background: url('../images/pattern6.png');
+	background: url('../images/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
     }
 
 .wrapper {
 	width: 60%;
-	margin: 0px auto;
+	margin: 30px auto;
 	min-height: 400px;
+	background: rgba(255,255,255,0.5);
+	padding: 20px;
 }
 
 .header {
@@ -15,15 +22,20 @@ body {
 }
 
 h1 {
-	color: #ff0000;
+	color: #620a04;
+	border-bottom: 1px solid #ed5913;
+}
+
+.subhead {
+	color: #ed5913;
 }
 
 strong, b {
-	color: #ff0000;
+	color: #620a04;
 }
 
 .footer {
-	width: 60%;
 	margin: 0px auto;
-	font-size: 0.75em;
+	font-size: 0.625em;
+	padding: 10px;
 }

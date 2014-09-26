@@ -1,10 +1,3 @@
-'''
-Student Name: Tara Thorne
-Student Number: #0003809521
-Assignment: Final
-Date: Thursday September 25, 2014
-GitHub URL: https://github.com/tthorne/dpwp/tree/master/Lab%201%20Madlib
-'''
 import webapp2
 import urllib2 #python classes and code needed to requesting info, receiving and opening
 import json
@@ -14,26 +7,28 @@ class MainHandler(webapp2.RequestHandler):
         p = FormPage()
         p.inputs = [['item_id', 'text', 'Item Id ex.9579'],['Submit', 'submit']]
 
-        if self.request.GET: #item_id variable in the url
-            im = ItemModel() #model is created
-            im.item_id = self.request.GET['item_id'] #sends our item_id from the URL to our Model
-            im.callApi() #tells it to connect to the API
+        if self.request.GET: #only if there is a zip variable in the url
+            #get info from api
+            im = ItemModel()
+            im.item_id = self.request.GET['item_id']
+            im.callApi()
 
-            iv = ItemView() #creates our View
-            iv.idos = im.dos #takes data objects from model and gives them to view
+            iv = ItemView()
+            iv.idos = im.dos #takes data objects from the model and gives them to view
             p._body = iv.content
 
         self.response.write(p.print_out())
 
+
 class ItemView(object):
-    '''This class handles how the data is shown to the user'''
+    '''This class handles how the data is shown to the user '''
     def __init__(self):
         self.__idos = []
-        self.__content = '<br />'
+        self.__content = '<br/>'
 
     def update(self):
         for do in self.__idos:
-            self.__content += "<strong>Name:</strong> " + do.name
+            self.__content += '<h2 class="subhead">Search Results</h2><strong>Name:</strong> ' + do.name + '<br/><strong>Description:</strong> <br/>' + do.description + '<br/><strong>Type:</strong> ' + do.type + '<br/><strong>Level:</strong> ' + do.level + '<br/><strong>Rarity:</strong> ' + do.rarity + '<br/><strong>Vendor Value:</strong> ' + do.vendor_value
 
     @property
     def content(self):
@@ -49,26 +44,23 @@ class ItemView(object):
         self.update()
 
 class ItemModel(object):
-    ''' This model handles fetching, parsing and sorting data from Yahoo's weather api '''
+    ''' This model handles fetching, parsing and sorting data from API'''
     def __init__(self):
         self.__url = "https://api.guildwars2.com/v1/item_details.json?item_id="
-        self.__item_id = ''
+        self._item_id = ''
 
-        #parse
-    #contact API
     def callApi(self):
-        #loads requests and loads info from API
-        #assemble the request
-        request = urllib2.Request(self.__url+self.__item_id)
+        #Requests and Loads info from API
+        request = urllib2.Request(self.__url + self._item_id)
         #use the urllib2 to create and object from the api
         opener = urllib2.build_opener()
         #use the url to get a result - request info from API
         result = opener.open(request)
 
-        #parse data
+        #parse json
         jsondoc = json.load(result)
-
-        #sorting data
+        #Sorts Data
+        self._dos = []
         do = ItemData()
         do.name = jsondoc['name']
         do.description = jsondoc['description']
@@ -87,11 +79,13 @@ class ItemModel(object):
         pass
 
     @item_id.setter
-    def item_id(self, i):
-        self._item_id = i
+    def item_id(self,z):
+        self._item_id = z
+
+
 
 class ItemData(object):
-    ''' This data object holds the data fetched by the model and shown by the view '''
+    '''This data object holds the data fetched by the model and shown in the view'''
     def __init__(self):
         self.name = ''
         self.description = ''
@@ -99,6 +93,8 @@ class ItemData(object):
         self.level = ''
         self.rarity = ''
         self.vendor_value = ''
+
+
 
 class Page(object): #borrowing stuff from the object class
     def __init__(self): #constructor
@@ -114,10 +110,10 @@ class Page(object): #borrowing stuff from the object class
 
         self._body = ''
         self._close = '''
-    </div>
-    <div class="footer"><hr>Guild Wars Copyright and Trademark Information<br/>
 
-&copy 2012 ArenaNet, Inc. All rights reserved. NCsoft, the interlocking NC logo, ArenaNet, Arena.net, Guild Wars, Guild Wars Factions, Factions, Guild Wars Nightfall, Nightfall, Guild Wars: Eye of the North, Eye of the North, Guild Wars 2, and all associated logos and designs are trademarks or registered trademarks of NCsoft Corporation. All other trademarks are the property of their respective owners.</div></body>
+    <div class="footer"><hr>&copy 2012 ArenaNet, Inc. All rights reserved. NCsoft, the interlocking NC logo, ArenaNet, Arena.net, Guild Wars, Guild Wars Factions, Factions, Guild Wars Nightfall, Nightfall, Guild Wars: Eye of the North, Eye of the North, Guild Wars 2, and all associated logos and designs are trademarks or registered trademarks of NCsoft Corporation. All other trademarks are the property of their respective owners.</div>
+    </div>
+    </body>
 </html>'''
 
     def print_out(self):
@@ -149,9 +145,11 @@ class FormPage(Page):
             except:
                 self._form_inputs += '" />'
 
+        print self._form_inputs
+
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Item Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
+        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Items Database Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
