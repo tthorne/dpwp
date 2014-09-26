@@ -54,6 +54,7 @@ input {
 	border-radius: 5px;
 	border: 1px solid #000000;
 	padding: 4px;
+	box-shadow: 1px 1px 1px #000000;
 }
 
 .button {
