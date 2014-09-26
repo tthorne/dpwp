@@ -7,7 +7,7 @@ GitHub URL: https://github.com/tthorne/dpwp/tree/master/Lab%201%20Madlib
 '''
 import webapp2
 import urllib2 #python classes and code needed to requesting info, receiving and opening
-from xml.dom import minidom
+import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -33,7 +33,7 @@ class ItemView(object):
 
     def update(self):
         for do in self.__idos:
-            self.__content += do.day + " HIGH: "+ do.high + " Low: " + do.low
+            self.__content += do.name + " HIGH: "+ do.high + " Low: " + do.low
             self.__content += "Condition: " + do.condition
 
     @property
@@ -54,7 +54,7 @@ class ItemModel(object):
     def __init__(self):
         self.__url = "https://api.guildwars2.com/v1/item_details.json?item_id="
         self.__zip = ''
-        self.__xmldoc = ''
+        self.__jsondoc = ''
 
         #parse
     #contact API
@@ -68,31 +68,20 @@ class ItemModel(object):
         result = opener.open(request)
 
         #parse data
-        self.__xmldoc = minidom.parse(result)
+        self.__jsondoc = json.load(result)
 
         #sorting data
         list = self.__xmldoc.getElementsByTagName("yweather:forecast")
         self._dos = []
         for tag in list :
-            do = WeatherData()
-            do.day = tag.attributes['day'].value
-            do.high = tag.attributes['high'].value
-            do.low = tag.attributes['low'].value
-            do.date = tag.attributes['date'].value
-            do.code = tag.attributes['code'].value
-            do.condition = tag.attributes['text'].value
+            do = ItemData()
+            do.name = tag.jsondoc['name']
+            do.description = tag.jsondoc['description']
+            do.type = tag.jsondoc['type']
+            do.level = tag.jsondoc['level']
+            do.rarity = tag.jsondoc['rarity']
+            do.vendor_value = tag.jsondoc['vendor_value']
             self._dos.append(do)
-
-#parse json
-            jsondoc = json.load(result)
-
-            name = jsondoc['name']
-            description = jsondoc['description']
-            type = jsondoc['type']
-            level = jsondoc['level']
-            rarity = jsondoc['rarity']
-            vendor_value = jsondoc['vendor_value']
-            self.response.write("<br/><strong>Item Name:</strong> " + name + "<br/><strong>Description:</strong> " + description + "<br/><strong>Type:</strong> " + type + "<br/><strong>Level:</strong> " + level + "<br/><strong>Rarity:</strong> " + rarity + "<br/><strong>Rarity:</strong> " + vendor_value)
 
     @property
     def dos(self):
