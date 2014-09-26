@@ -14,9 +14,9 @@ class MainHandler(webapp2.RequestHandler):
         p = FormPage()
         p.inputs = [['item_id', 'text', 'Item Id ex.9579'],['Submit', 'submit']]
 
-        if self.request.GET: #only if there is a zip variable in the url
-            im = ItemModel() #creates our model
-            im.item_id = self.request.GET['item_id'] #sends our Zip from the URL to our Model
+        if self.request.GET: #item_id variable in the url
+            im = ItemModel() #model is created
+            im.item_id = self.request.GET['item_id'] #sends our item_id from the URL to our Model
             im.callApi() #tells it to connect to the API
 
             iv = ItemView() #creates our View
@@ -59,7 +59,7 @@ class ItemModel(object):
     def callApi(self):
         #loads requests and loads info from API
         #assemble the request
-        request = urllib2.Request(self.__url+self.__zip)
+        request = urllib2.Request(self.__url+self.__item_id)
         #use the urllib2 to create and object from the api
         opener = urllib2.build_opener()
         #use the url to get a result - request info from API
@@ -87,8 +87,8 @@ class ItemModel(object):
         pass
 
     @item_id.setter
-    def item_id(self, z):
-        self._item_id = z
+    def item_id(self, i):
+        self._item_id = i
 
 class ItemData(object):
     ''' This data object holds the data fetched by the model and shown by the view '''
@@ -106,7 +106,9 @@ class Page(object): #borrowing stuff from the object class
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>Guild Wars 2 Item Database Search</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
     </head>
     <body>'''
 
@@ -146,7 +148,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + "Guild Wars 2 Item Search" + self._form_open + self._form_inputs + self._form_close + self._body + self._close
+        return self._head + '<img src="images/GW2_Logo.png" width="300px" /><h1>Guild Wars 2 Item Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
