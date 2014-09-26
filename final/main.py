@@ -28,7 +28,7 @@ class ItemView(object):
 
     def update(self):
         for do in self.__idos:
-            self.__content += '<h2 class="subhead">Search Results</h2><strong>Name:</strong> ' + do.name + '<br/><strong>Description:</strong> <br/>' + do.description + '<br/><strong>Type:</strong> ' + do.type + '<br/><strong>Level:</strong> ' + do.level + '<br/><strong>Rarity:</strong> ' + do.rarity + '<br/><strong>Vendor Value:</strong> $' + do.vendor_value
+            self.__content += '<h2 class="subhead">Search Results</h2><strong>Name:</strong> ' + do.name + '<br/><strong>Description:</strong> <br/>' + do.description + '<br/><strong>Type:</strong> ' + do.type + '<br/><strong>Level:</strong> ' + do.level + '<br/><strong>Rarity:</strong> ' + do.rarity + '<br/><strong>Vendor Value:</strong> $' + do.vendor_value + '<hr/>'
 
     @property
     def content(self):
@@ -111,7 +111,7 @@ class Page(object): #borrowing stuff from the object class
         self._body = ''
         self._close = '''
 
-    <div class="footer"><hr>&copy 2012 ArenaNet, Inc. All rights reserved. NCsoft, the interlocking NC logo, ArenaNet, Arena.net, Guild Wars, Guild Wars Factions, Factions, Guild Wars Nightfall, Nightfall, Guild Wars: Eye of the North, Eye of the North, Guild Wars 2, and all associated logos and designs are trademarks or registered trademarks of NCsoft Corporation. All other trademarks are the property of their respective owners.</div>
+    <div class="footer">&copy 2012 ArenaNet, Inc. All rights reserved. NCsoft, the interlocking NC logo, ArenaNet, Arena.net, Guild Wars, Guild Wars Factions, Factions, Guild Wars Nightfall, Nightfall, Guild Wars: Eye of the North, Eye of the North, Guild Wars 2, and all associated logos and designs are trademarks or registered trademarks of NCsoft Corporation. All other trademarks are the property of their respective owners.</div>
     </div>
     </body>
 </html>'''
@@ -149,7 +149,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Items Database Search</h1><div class="search">' + self._form_open + self._form_inputs + self._form_close + '</div>' + self._body + self._close
+        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Items Database Search</h1><hr>' + self._form_open + self._form_inputs + self._form_close + '<hr>' + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

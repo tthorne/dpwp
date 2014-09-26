@@ -12,7 +12,7 @@ body {
 .wrapper {
 	width: 60%;
 	margin: 30px auto;
-	min-height: 600px;
+	min-height: 650px;
 	padding: 20px;
 	border: 2px solid #620a04;
 	box-shadow: 1px 1px 15px #000000;
@@ -32,6 +32,7 @@ h1 {
 	color: #620a04;
 	text-shadow: 1px 1px 1px #000000;
 	border-bottom: 1px solid #ed5913;
+	margin-top: 0px;
 }
 
 .subhead {
@@ -45,13 +46,13 @@ strong, b {
 }
 
 .footer {
-	margin: 40px auto;
+	margin: 30px auto;
 	font-size: 0.625em;
 	padding: 10px;
 }
 
 input {
-	height: 30px;
+	height: 20px;
 	border-radius: 5px;
 	border: 1px solid #000000;
 	padding: 4px;
@@ -60,7 +61,7 @@ input {
 
 .button {
   color: #fff;
-  height: 40px;
+  height: 30px;
   background-color: #620a04;
   border: 1px solid #ed5913;
   border-radius: 5px;
