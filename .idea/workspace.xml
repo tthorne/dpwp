@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8066b460-d10c-4d55-b9a3-51e195ed9f98" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final/images/herobg.png" afterPath="$PROJECT_DIR$/final/images/herobg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final/css/style.css" afterPath="$PROJECT_DIR$/final/css/style.css" />
     </list>
     <ignored path="dpwp.iws" />

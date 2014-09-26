@@ -4,6 +4,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: top;
+	background-attachment: fixed;
 	margin: 0px;
 	font-family: 'Open Sans', sans-serif;
     }
@@ -11,7 +12,7 @@ body {
 .wrapper {
 	width: 60%;
 	margin: 30px auto;
-	min-height: 400px;
+	min-height: 600px;
 	padding: 20px;
 	border: 2px solid #620a04;
 	box-shadow: 1px 1px 15px #000000;
@@ -44,7 +45,7 @@ strong, b {
 }
 
 .footer {
-	margin: 0px auto;
+	margin: 40px auto;
 	font-size: 0.625em;
 	padding: 10px;
 }
