@@ -110,11 +110,14 @@ class Page(object): #borrowing stuff from the object class
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
     </head>
-    <body>'''
+    <body><div class="wrapper">'''
 
         self._body = ''
         self._close = '''
-    </body>
+    </div>
+    <div class="footer"><hr>Guild Wars Copyright and Trademark Information<br/>
+
+&copy 2012 ArenaNet, Inc. All rights reserved. NCsoft, the interlocking NC logo, ArenaNet, Arena.net, Guild Wars, Guild Wars Factions, Factions, Guild Wars Nightfall, Nightfall, Guild Wars: Eye of the North, Eye of the North, Guild Wars 2, and all associated logos and designs are trademarks or registered trademarks of NCsoft Corporation. All other trademarks are the property of their respective owners.</div></body>
 </html>'''
 
     def print_out(self):
@@ -148,7 +151,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + '<img src="images/GW2_Logo.png" width="300px" /><h1>Guild Wars 2 Item Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
+        return self._head + '<div class="header"><img src="images/GW2_Logo.png" width="500px" /></div><h1>Guild Wars 2 Item Search</h1>' + self._form_open + self._form_inputs + self._form_close + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

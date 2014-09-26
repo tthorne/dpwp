@@ -1,3 +1,21 @@
 body {
     font-family: 'Open Sans', sans-serif;
+	background: url('../images/pattern6.png');
     }
+
+.wrapper {
+	width: 60%;
+	margin: 0px auto;
+	min-height: 400px;
+}
+
+.header {
+	width: 50%;
+	margin: 0px auto;
+}
+
+.footer {
+	width: 60%;
+	margin: 0px auto;
+	font-size: 0.75em;
+}
