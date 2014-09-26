@@ -49,3 +49,11 @@ strong, b {
 	font-size: 0.625em;
 	padding: 10px;
 }
+
+.button {
+  color: #fff;
+  background-color: #620a04;
+  border: 1px solid #ed5913;
+  border-radius: 5px;
+  margin: 4px;
+}

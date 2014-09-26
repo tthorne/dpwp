@@ -143,7 +143,7 @@ class FormPage(Page):
                 self._form_inputs += '" placeholder="' + item[2] + '" />'
             #otherwise.. end tag
             except:
-                self._form_inputs += '" />'
+                self._form_inputs += '" class="button" />'
 
         print self._form_inputs
 
