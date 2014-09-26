@@ -14,6 +14,9 @@ body {
 	min-height: 400px;
 	background: rgba(255,255,255,0.5);
 	padding: 20px;
+	border: 2px solid #620a04;
+	box-shadow: 1px 1px 15px #000000;
+	border-radius: 40px;
 }
 
 .header {
@@ -23,11 +26,14 @@ body {
 
 h1 {
 	color: #620a04;
+	text-shadow: 1px 1px 1px #ffffff;
 	border-bottom: 1px solid #ed5913;
 }
 
 .subhead {
 	color: #ed5913;
+	text-shadow: 1px 1px 1px #ffffff;
+	border-bottom: 1px solid #620a04;
 }
 
 strong, b {
