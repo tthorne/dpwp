@@ -33,8 +33,7 @@ class ItemView(object):
 
     def update(self):
         for do in self.__idos:
-            self.__content += do.name + " HIGH: "+ do.high + " Low: " + do.low
-            self.__content += "Condition: " + do.condition
+            self.__content += "<strong>Name:</strong> " + do.name
 
     @property
     def content(self):
@@ -54,7 +53,6 @@ class ItemModel(object):
     def __init__(self):
         self.__url = "https://api.guildwars2.com/v1/item_details.json?item_id="
         self.__item_id = ''
-        self.__jsondoc = ''
 
         #parse
     #contact API
@@ -68,20 +66,17 @@ class ItemModel(object):
         result = opener.open(request)
 
         #parse data
-        self.__jsondoc = json.load(result)
+        jsondoc = json.load(result)
 
         #sorting data
-        list = self.__xmldoc.getElementsByTagName("yweather:forecast")
-        self._dos = []
-        for tag in list :
-            do = ItemData()
-            do.name = tag.jsondoc['name']
-            do.description = tag.jsondoc['description']
-            do.type = tag.jsondoc['type']
-            do.level = tag.jsondoc['level']
-            do.rarity = tag.jsondoc['rarity']
-            do.vendor_value = tag.jsondoc['vendor_value']
-            self._dos.append(do)
+        do = ItemData()
+        do.name = jsondoc['name']
+        do.description = jsondoc['description']
+        do.type = jsondoc['type']
+        do.level = jsondoc['level']
+        do.rarity = jsondoc['rarity']
+        do.vendor_value = jsondoc['vendor_value']
+        self._dos.append(do)
 
     @property
     def dos(self):
@@ -115,7 +110,7 @@ class Page(object): #borrowing stuff from the object class
     </head>
     <body>'''
 
-        self._body = 'Weather App'
+        self._body = ''
         self._close = '''
     </body>
 </html>'''
@@ -151,7 +146,7 @@ class FormPage(Page):
 
     #polymorphism alert!!! -------- method overriding
     def print_out(self):
-        return self._head + self._form_open + self._form_inputs + self._form_close + self._body + self._close
+        return self._head + "Guild Wars 2 Item Search" + self._form_open + self._form_inputs + self._form_close + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
